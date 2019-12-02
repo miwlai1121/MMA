@@ -1,18 +1,22 @@
 <html>
     <head>
-        <title>Restaurants List</title>
+       
     </head>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <body>
-	<div class="w3-container w3-blue" align="center">
-	<H1>Restaurants List</H1>
-	</div>
-        <H2>Showing <%= restaurants.length %> restaurant(s)</H2>
-	<a href="/create">Create Restaurant</a>
+        <H2>Showing <%= restaurants.length %> document(s)</H2> 
         <ol>
+	<h1>hihihihi</h1>
             <% for (i in restaurants) { %>
-                <li><a href=/display?_id=<%= restaurants[i]._id%>><%=restaurants[i].name%></a></li>
+        
+		<li><a href=/display?_id=<%= restaurants[i]._id%>><%=restaurants[i].name%></a></li>
             <% } %>
         </ol>
+
+	<form action="search" method="get" enctype="multipart/form-data">
+        <input type="text" name="name" minlength=1><br>
+        <input type="submit" value="Search">
+
+    </form>
     </body>
 </html>
+

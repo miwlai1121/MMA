@@ -19,8 +19,15 @@
 	User: <br>
 	Score: <br><br>
 	Owner: <%=restaurants[0].owner%><br><br>
-	<a href="/restaurant">Back</a>
 
+	<form id='delete' action='/restaurant/<%=restaurants[0]._id%>?_method=DELETE' method='POST'>
+            <button class='ui red basic button'>Delete</button>
+        </form>
+
+	<a href="/">Back</a>
+	<a href="/grade?_id=<%= restaurants[0]._id%>">Rate</a><br>
+	<a href="/edit?_id=<%= restaurants[0]._id%>">Edit</a><br>
+	<a href="/logout">Logout</a>
 </body>
 
 </html>
